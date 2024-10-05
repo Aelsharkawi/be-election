@@ -9,12 +9,3 @@ CREATE TABLE candidate (
     experience VARCHAR(255)                 -- Candidate's experience, optional with a maximum length of 255 characters
 );
 
--- Create Vote table
-CREATE TABLE vote (
-    id SERIAL PRIMARY KEY,                  -- Auto-incrementing primary key
-    candidate_id BIGINT NOT NULL,           -- Foreign key reference to candidate's ID
-    CONSTRAINT fk_candidate
-      FOREIGN KEY(candidate_id)
-      REFERENCES candidate(id)              -- Foreign key constraint to ensure valid candidate reference
-      ON DELETE CASCADE                     -- If a candidate is deleted, the corresponding votes are deleted
-);
