@@ -23,7 +23,7 @@ spring:
         SQL: DEBUG
         type.descriptor.sql.BasicBinder: TRACE
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5432/election}
+    url: ${DB_URL:jdbc:postgresql://DBS:5432/election}
     username: ${DB_USERNAME:abdullahelsharkawi}
     password: ${DB_PASSWORD:postgres}
   jpa:
